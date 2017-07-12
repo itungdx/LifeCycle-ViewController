@@ -26,9 +26,12 @@ class ViewController: UIViewController {
         
         self.navigationController?.pushViewController(manHinh2, animated: true)
     }
-//    override func loadView() {
-//        print("View1 load View")
-//    }
+    //hàm loadView là hàm đọc cấu hình, nội dung trong StoryBoard (thực chất là file XML) sau đó vẽ ra màn hình.
+    //Nếu trong overwrite loadView em không gọi super.loadView thì nội dung StoryBoard sẽ bị bỏ qua, màn hình chỉ là màn hình đen không có bổ xung, khởi tạo gì cả
+    override func loadView() {
+        super.loadView()
+        print("View1 load View")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
